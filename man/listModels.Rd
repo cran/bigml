@@ -1,0 +1,61 @@
+\name{listModels}
+\alias{listModels}
+\title{Listing BigML Datasets}
+\usage{
+  listModels(flatten = TRUE, models_only = TRUE, ...)
+}
+\arguments{
+  \item{flatten}{A logical value indicating whether to
+  flatten the response into a data frame.}
+
+  \item{models_only}{A logical value indicating whether to
+  only return the data frame of model information (only
+  valid if \code{flatten} is \code{TRUE}).}
+
+  \item{\dots}{Arbitrary named arguments that are passed on
+  to \code{\link{formEncodeURL}} in order to create
+  form-encoded URL options.}
+}
+\value{
+  If flatten is TRUE, and models_only = TRUE a data frame
+  of: \item{category}{numeric} \item{code}{numeric}
+  \item{columns}{numeric} \item{created}{character}
+  \item{credits}{numeric} \item{dataset}{character}
+  \item{dataset_status}{logical}
+  \item{description}{character} \item{holdout}{numeric}
+  \item{locale}{character} \item{max_columns}{numeric}
+  \item{max_rows}{numeric} \item{name}{character}
+  \item{number_of_predictions}{numeric}
+  \item{objective_fields}{character}
+  \item{private}{logical} \item{resource}{character}
+  \item{rows}{numeric} \item{size}{numeric}
+  \item{source}{character} \item{source_status}{logical}
+  \item{updated}{character}
+
+  If flatten is TRUE and models_only = FALSE a list of:
+  \item{meta}{list} \item{models}{data.frame}
+
+  If flatten is FALSE a list of: \item{meta}{list}
+  \item{objects}{list}
+
+  see references for more details
+}
+\description{
+  Listing BigML Datasets
+}
+\note{
+  While all BigML API functions are asynchronous, this
+  function will continue polling the BigML API until the
+  operation is complete.
+}
+\author{
+  Justin Donaldson \email{donaldson@bigml.com}
+}
+\references{
+  \url{https://bigml.com/developers/models}
+}
+\seealso{
+  Other model methods: \code{\link{createModel}},
+  \code{\link{getModel}}, \code{\link{quickModel}}
+}
+

@@ -1,0 +1,53 @@
+\name{getModel}
+\alias{getModel}
+\title{Retrieving a BigML Model}
+\usage{
+  getModel(model_id, ...)
+}
+\arguments{
+  \item{model_id}{A string giving the model id.}
+
+  \item{\dots}{Arbitrary named arguments that are passed on
+  to \code{\link{formEncodeURL}} in order to create
+  form-encoded URL options.}
+}
+\value{
+  \item{category}{numeric} \item{code}{numeric}
+  \item{columns}{numeric} \item{created}{character}
+  \item{credits}{numeric} \item{dataset}{character}
+  \item{dataset_status}{logical}
+  \item{description}{character} \item{holdout}{numeric}
+  \item{input_fields}{character} \item{locale}{character}
+  \item{max_columns}{numeric} \item{max_rows}{numeric}
+  \item{model}{list} \item{name}{character}
+  \item{number_of_predictions}{numeric}
+  \item{objective_fields}{character}
+  \item{private}{logical} \item{range}{numeric}
+  \item{resource}{character} \item{rows}{numeric}
+  \item{size}{numeric} \item{source}{character}
+  \item{source_status}{logical} \item{status}{list}
+  \item{tags}{AsIs} \item{updated}{character}
+}
+\description{
+  Retrieving a BigML Model
+}
+\details{
+  This function needs to use id information from existing R
+  resources.  See the references for more details.
+}
+\note{
+  While all BigML API functions are asynchronous, this
+  function will continue polling the BigML API until the
+  operation is complete.
+}
+\author{
+  Justin Donaldson \email{donaldson@bigml.com}
+}
+\references{
+  \url{https://bigml.com/developers/models}
+}
+\seealso{
+  Other model methods: \code{\link{createModel}},
+  \code{\link{listModels}}, \code{\link{quickModel}}
+}
+

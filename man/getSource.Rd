@@ -1,0 +1,54 @@
+\name{getSource}
+\alias{getSource}
+\title{Retrieving a BigML Source}
+\usage{
+  getSource(source_id, flatten = TRUE)
+}
+\arguments{
+  \item{source_id}{A character value giving the name of the
+  source.}
+
+  \item{flatten}{A logical value indicating whether to
+  flatten the response into a data frame.}
+
+  \item{\dots}{Arbitrary named arguments that are passed on
+  to \code{\link{formEncodeURL}} in order to create
+  form-encoded URL options.}
+}
+\value{
+  \item{category}{numeric} \item{code}{numeric}
+  \item{content_type}{character} \item{created}{character}
+  \item{credits}{numeric} \item{description}{character}
+  \item{fields}{data.frame (or list if flatten=FALSE)}
+  \item{file_name}{character} \item{md5}{character}
+  \item{name}{character} \item{number_of_datasets}{numeric}
+  \item{number_of_models}{numeric}
+  \item{number_of_predictions}{numeric}
+  \item{private}{logical} \item{resource}{character}
+  \item{size}{numeric} \item{source_parser}{list}
+  \item{status}{list} \item{tags}{AsIs}
+  \item{type}{numeric} \item{updated}{character}
+}
+\description{
+  Retrieving a BigML Source
+}
+\details{
+  This function needs to use id information from existing R
+  resources.  See the references for more details.
+}
+\note{
+  While all BigML API functions are asynchronous, this
+  function will continue polling the BigML API until the
+  operation is complete.
+}
+\author{
+  Justin Donaldson \email{donaldson@bigml.com}
+}
+\references{
+  \url{https://bigml.com/developers/sources}
+}
+\seealso{
+  Other source methods: \code{\link{createSource}},
+  \code{\link{listSources}}, \code{\link{quickSource}}
+}
+
